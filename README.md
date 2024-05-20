@@ -4,15 +4,17 @@
 
 Pytorch code containing `GPTLanguageModel` and `GPTLanguageModelConfig`. Follows the general specs below.
 
-├─Token Embedding
-├─Positional Embedding
-├─ Transformer Block (x12)
-│ └─LayerNorm
-│ └─MultiHeadAttention
-│ └─LayerNorm
-│ └─FeedForward
-├─LayerNorm
-├─Linear (shares weights with token embedding table)
+```
+├── Token Embedding
+├── Positional Embedding
+├── Transformer Block (x12)
+│   ├── LayerNorm
+│   ├── MultiHeadAttention
+│   ├── LayerNorm
+│   └── FeedForward
+├── LayerNorm
+└── Linear (shares weights with token embedding table)
+```
 
 ## data.py
 
