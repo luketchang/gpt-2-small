@@ -1,0 +1,7 @@
+torch
+torchinfo
+tiktoken
+portalocker
+torchdata
+datasets
+tqdm
