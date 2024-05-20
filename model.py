@@ -79,10 +79,11 @@ class TransformerBlock(nn.Module):
 
     def __init__(self, config):
         super().__init__()
-        self.sa = MultiHeadAttention(config)
-        self.ffwd = FeedForward(config)
+
         self.layernorm1 = nn.LayerNorm(config.n_embed)
+        self.sa = MultiHeadAttention(config)
         self.layernorm2 = nn.LayerNorm(config.n_embed)
+        self.ffwd = FeedForward(config)
 
     def forward(self, x):
         # add "x +" as part of residual connection (helps with vanishing gradients in deep network)
